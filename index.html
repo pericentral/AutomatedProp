@@ -2,16 +2,21 @@
 <html>
   <diov>
     <meta charset="utf-8"/>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <title>Automated Propaganda</title>
+    <!-- <img id="logosvg" src="PropLogo.svg" /> -->
+
     <script type="text/javascript">
+
       function draw() {
         var canvas = document.getElementById('square');
         var bigWords = document.getElementById('title').value;
+
         if (canvas.getContext) {
           var ctx = canvas.getContext('2d');
           ctx.fillStyle = "red";
           ctx.fillRect(0, 0, canvas.width, canvas.height);
-          ctx.font = "65px Buran USSR";
+          ctx.font = "65px buran_ussrregular";
           ctx.fillStyle = "black";
           ctx.textAlign = "center";
           ctx.fillText(bigWords, canvas.width/2, canvas.height/2);
@@ -49,14 +54,13 @@ make sure to separate the paragraphs:
       canvas { border: 0px solid black; }
     </style>
   </div>
-  <div>  <body onload="draw();">
+  <div>  <body oninput="draw();">
     <canvas id="square" width="800" height="800"></canvas>
-    <img src="PropLogo.svg" 
+    <!-- <img src="PropLogo.svg" 
     style="position: relative; 
            left: -130px; 
            top:-20px;
-           width: 100px;
-    " />
+           width: 100px" /> -->
   </body>
 </div>
 </html>
