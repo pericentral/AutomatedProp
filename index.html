@@ -16,7 +16,7 @@
           var ctx = canvas.getContext('2d');
           ctx.fillStyle = "red";
           ctx.fillRect(0, 0, canvas.width, canvas.height);
-          ctx.font = "65px buran_ussrregular";
+          ctx.font = "65px Buran USSR";
           ctx.fillStyle = "black";
           ctx.textAlign = "center";
           ctx.fillText(bigWords, canvas.width/2, canvas.height/2);
@@ -45,14 +45,6 @@ make sure to separate the paragraphs:
         </form>
 
         <br>
-
-    <style type="text/css">
-          @font-face { font-family: Bursan; src: url('Buran USSR.TTF'); } 
-      h1 {
-         font-family: Bursan
-      }
-      canvas { border: 0px solid black; }
-    </style>
   </div>
   <div>  <body oninput="draw();">
     <canvas id="square" width="800" height="800"></canvas>
