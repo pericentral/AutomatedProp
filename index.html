@@ -4,20 +4,10 @@
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <title>Automated Propaganda</title>
-    <!-- <img id="logosvg" src="PropLogo.svg" /> -->
-
     <script type="text/javascript">
-        // function log(text) {
-        //     var txtArea ;
-
-        //     txtArea = document.getElementById("txtDebug") ;
-        //     txtArea.value +=  text + '\r\n';
-        // }
       function draw() {
         var canvas = document.getElementById('square');
         var bigWords = document.getElementById('title').value;
-        // var bigWords = bigWords.value += text + '\r\n';
-
         if (canvas.getContext) {
           var ctx = canvas.getContext('2d');
           ctx.fillStyle = "red";
