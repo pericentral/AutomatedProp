@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <diov>
+    <meta charset="utf-8"/>
+    <title>Automated Propaganda</title>
+    <script type="text/javascript">
+      function draw() {
+        var canvas = document.getElementById('square');
+        var bigWords = document.getElementById('title').value;
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+          ctx.fillStyle = "red";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.font = "65px Buran USSR";
+          ctx.fillStyle = "black";
+          ctx.textAlign = "center";
+          ctx.fillText(bigWords, canvas.width/2, canvas.height/2);
+        }
+      }
+    </script>
+
+    <form action="/action_page.php">
+        <label for="title">First slide for title:</label>
+        <br>
+        <textarea id="title" name="title" rows="2" cols="50">
+Insert the Title here
+          </textarea>
+          <input type="submit" value="KBS">
+        </form>
+    <br>
+
+    <form action="/action_page.php">
+        <label for="statement">Slides for statement:</label>
+        <br>
+        <textarea id="statement" name="statement" rows="4" cols="50">
+Paste the statement here,
+make sure to separate the paragraphs:
+            </textarea>
+            <input type="submit" value="KBS">
+        </form>
+
+        <br>
+
+    <style type="text/css">
+          @font-face { font-family: Bursan; src: url('Buran USSR.TTF'); } 
+      h1 {
+         font-family: Bursan
+      }
+      canvas { border: 0px solid black; }
+    </style>
+  </div>
+  <div>  <body onload="draw();">
+    <canvas id="square" width="800" height="800"></canvas>
+    <img src="PropLogo.svg" 
+    style="position: relative; 
+           left: -130px; 
+           top:-20px;
+           width: 100px;
+    " />
+  </body>
+</div>
+</html>
